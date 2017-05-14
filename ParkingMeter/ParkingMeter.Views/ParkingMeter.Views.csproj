@@ -102,12 +102,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\parking-meter.png" />
+    <Resource Include="Images\parking-meter.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1zl.png" />
-    <Resource Include="Resources\2zl.png" />
-    <Resource Include="Resources\5zl.png" />
+    <Resource Include="Images\1zl.png" />
+    <Resource Include="Images\2zl.png" />
+    <Resource Include="Images\5zl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\diagram.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,35 +9,43 @@
         Title="MainWindow" Height="350" Width="268">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2.5*"></RowDefinition>
+            <RowDefinition Height="4.5*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock TextAlignment="Center" Text="Automata State: " Margin="5,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"></TextBlock>
-            <TextBlock TextAlignment="Center" Text="{Binding State}" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"></TextBlock>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <StackPanel  Orientation="Horizontal" Height="34">
+                <TextBlock TextAlignment="Center" Text="Automata State: " Margin="5,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"></TextBlock>
+                <TextBlock TextAlignment="Center" Text="{Binding State}" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"></TextBlock>
+            </StackPanel>
+            <ScrollViewer Height="41" >
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock TextAlignment="Center" Text="State Road: " Margin="5,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"></TextBlock>
+                    <TextBlock TextAlignment="Left" Text="{Binding StateRoad}" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
         </StackPanel>
 
         <Grid Grid.Row="1">
-            <Image Source="Resources/parking-meter.png"  HorizontalAlignment="Center" Height="152" Margin="0,41,0,0" VerticalAlignment="Top" Width="154"/>
-            <TextBlock x:Name="LabelValue" HorizontalAlignment="Center" TextAlignment="Center" Margin="116,116,125,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="21" Foreground="White" Height="25" FontSize="20"/>
+            <Image Source="Images/parking-meter.png"  HorizontalAlignment="Center" Height="152" Margin="0,0,0,0" VerticalAlignment="Top" Width="154"/>
+            <TextBlock x:Name="LabelValue" HorizontalAlignment="Center" TextAlignment="Center" Margin="116,74,125,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="21" Foreground="White" Height="25" FontSize="20"/>
         </Grid>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Button x:Name="Button1zl" Command="{Binding AddOne}" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="83" Height="79" Background="Transparent" BorderThickness="0">
                 <StackPanel>
-                    <Image Source="Resources/1zl.png" Height="76" Width="78" />
+                    <Image Source="Images/1zl.png" Height="76" Width="78" />
                 </StackPanel>
             </Button>
             <Button x:Name="Button2zl" Command="{Binding AddTwo}"  HorizontalAlignment="Center"  VerticalAlignment="Top" Width="83" Height="82" Background="Transparent" BorderThickness="0">
                 <StackPanel>
-                    <Image Source="Resources/2zl.png" />
+                    <Image Source="Images/2zl.png" />
                 </StackPanel>
             </Button>
             <Button x:Name="Button5zl" Command="{Binding AddFive}" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="82" Height="83" Background="Transparent" BorderThickness="0" >
                 <StackPanel>
-                    <Image Source="Resources/5zl.png" />
+                    <Image Source="Images/5zl.png" />
                 </StackPanel>
             </Button>
         </StackPanel>
