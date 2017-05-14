@@ -6,7 +6,7 @@ open System.ComponentModel
 open Microsoft.FSharp.Quotations
 open Microsoft.FSharp.Quotations.Patterns
 
-type BaseViewModel() =
+type BaseViewModel() =            
     let propertyChanged = new Event<_, _>()
     let toPropName(query : Expr) = 
         match query with
