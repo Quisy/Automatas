@@ -51,9 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
-    <Resource Include="Views\MainView.xaml" />
+    <Compile Include="Enums\ParkingMeterState.fs" />
+    <Compile Include="Models\ParkingMeter.fs" />
+    <Compile Include="ViewModels\BaseViewModel.fs" />
+    <Compile Include="ViewModels\MainViewModel.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

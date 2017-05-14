@@ -1,0 +1,19 @@
+﻿<Window x:Class="ParkingMeter.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParkingMeter.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="Button1zl" Content="Button" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="83" Height="53"/>
+        <Button Grid.Column="0" x:Name="Button2zl" Content="Button" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Width="83" Height="53"/>
+        <Button Grid.Column="0" x:Name="Button5zl" Content="Button" HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Width="83" Height="53"/>
+        <TextBlock x:Name="LabelValue" Grid.Column="1" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,44,0,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="135"/>
+    </Grid>
+</Window>
