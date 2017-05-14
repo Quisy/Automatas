@@ -43,9 +43,13 @@ type MainViewModel() =
         | 4 -> fun () -> this.State <- ParkingMeterState.Q4
         | 5 -> fun () -> this.State <- ParkingMeterState.Q5
         | 6 -> fun () -> this.State <- ParkingMeterState.Q6
-        | 7 -> fun () -> this.State <- ParkingMeterState.Q7
-        | 8 -> fun () -> this.State <- ParkingMeterState.Q8
-        | currentValue when this.Value > 8 -> fun () -> 
-            this.State <- ParkingMeterState.Q0 
-            this.Value <- 0
+        | currentValue when this.Value = 7 -> 
+            fun () -> 
+                this.State <- ParkingMeterState.Q7
+                this.Value <- 0
+        | currentValue when this.Value > 7-> 
+            fun () -> 
+                this.State <- ParkingMeterState.Q8
+                this.Value <- 0
         | _ -> fun () -> this.State <- ParkingMeterState.Q0
+        
