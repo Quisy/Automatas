@@ -32,6 +32,12 @@ type MainViewModel() as mainVM =
         and set (v : ParkingMeterState) = 
             _state <- v
             base.OnPropertyChanged(<@ this.State @>)
+
+    member this.IsTicketGiven 
+        with get () = if this.State = ParkingMeterState.Q7 then true else false
+
+    member this.AreCoinsGivenBack 
+        with get () = if this.State = ParkingMeterState.Q8 then true else false
     
     member this.StateRoad = _visitedSates |> List.fold (fun string s -> " > " + s.ToString() + string) ""
     member this.AddToValue(value : int) = this.Value <- this.Value + value
@@ -74,4 +80,6 @@ type MainViewModel() as mainVM =
         fun (state : ParkingMeterState) -> 
             this.State <- state
             _visitedSates <- addToList _visitedSates state
-            mainVM.OnPropertyChanged(<@ this.StateRoad @>) |> ignore
+            mainVM.OnPropertyChanged(<@ this.StateRoad @>)
+            mainVM.OnPropertyChanged(<@ this.IsTicketGiven @>)
+            mainVM.OnPropertyChanged(<@ this.AreCoinsGivenBack @>)

@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -111,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\diagram.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coins.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

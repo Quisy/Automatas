@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParkingMeter.Views"
+        xmlns:converters="clr-namespace:ParkingMeter.Views.Converters"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="MainWindow" Height="350" Width="268">
+
+    <Window.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2.5*"></RowDefinition>
@@ -29,6 +34,8 @@
 
         <Grid Grid.Row="1">
             <Image Source="Images/parking-meter.png"  HorizontalAlignment="Center" Height="152" Margin="0,0,0,0" VerticalAlignment="Top" Width="154"/>
+            <Image Source="Images/ticket.png" HorizontalAlignment="Left" Height="78" Margin="0,74,0,-7.333" VerticalAlignment="Top" Width="71" Visibility="{Binding IsTicketGiven, Converter={StaticResource BoolToVis}}"/>
+            <Image Source="Images/coins.png" HorizontalAlignment="Left" Height="78" Margin="182,74,0,-7.333" VerticalAlignment="Top" Width="71" Visibility="{Binding AreCoinsGivenBack, Converter={StaticResource BoolToVis}}"/>
             <TextBlock x:Name="LabelValue" HorizontalAlignment="Center" TextAlignment="Center" Margin="116,74,125,0" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="21" Foreground="White" Height="25" FontSize="20"/>
         </Grid>
 
